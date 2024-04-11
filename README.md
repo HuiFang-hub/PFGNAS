@@ -87,13 +87,16 @@ Figure 2. A simplified example of GNN NAS optimization is demonstrated using the
 
 | Model       | Accuracy   | AUC        | Best Architecture |
 | ----------- | ---------- | ---------- | ----------------- |
+|GCN | 78.01±0.42|66.66±0.25 |/|
+|FEDPUB|82.32±0.62|67.44±0.63|/|
+|FLAGNNS|76.19±1.63|65.14±0.07|[2, 9, 19, 0, 26, 0, 41, 5]|
 | PFGNAS-GPT4 | 82.53±1.06 | 67.51±0.18 | `ddc5-hbb3-ihb3'  |
 | PFGNAS-GLM4 | **83.80±2.22** | 68.32±0.48 | `hia4-bkc3-fje5'  |
 | PFGNAS-PALM | 82.27±3.77 | **68.65±0.94** | `jhf2-fbd5-ddc5'  |
 
 ### Results of PFGNAS Prompt
 
-To validate the effectiveness of GNAS Prompt design, we constructed four variants for conducting ablation experiments:
+To validate the effectiveness of GNAS Prompt design, we constructed four variants for conducting ablation experiments on PubMed (N=10):
 
 - PFGNAS-st: The prompt without search task.
 - PFGNAS-ssp: The prompt without search space.
