@@ -1,12 +1,12 @@
 # PFGNAS
 
-This repo contains the sample code for reproducing the results of our paper: Graph Neural Architecture Search with Large Language Models for Personalized Federated Learning.
+This repo contains the sample code for reproducing the results of our paper: **Graph Neural Architecture Search with Large Language Models for Personalized Federated Learning**.
 
 ## Introduction
 
-​	Personalized federated learning on graphs is widely studied for collaboratively training a global model in the presence of heterogeneous graphs distributed among multiple clients while preserving data privacy. However, its reliance on expert knowledge for model design and its tendency to make simplistic assumptions about data distribution impose new challenges to federated learning on graphs. While Graph Neural Architecture Search (GNAS) has emerged as a solution for the automated design of Graph Neural Network (GNN) architectures, it falls short in effectively incorporating personalization information in federated learnings. 
+​	Personalized federated learning on graphs is widely studied for collaboratively training a global model in the presence of heterogeneous graphs distributed among multiple clients while preserving data privacy. However, its reliance on expert knowledge for model design and its tendency to make simplistic assumptions about data distribution imposes new challenges to federated learning on graphs. While Graph Neural Architecture Search (GNAS) has emerged as a solution for the automated design of Graph Neural Network (GNN) architectures, it falls short of effectively incorporating personalization information in federated learnings. 
 
-To address this issue, we design an innovative approach termed \textbf{P}ersonalized \textbf{F}ederated \textbf{G}raph \textbf{N}eural \textbf{A}rchitecture \textbf{S}earch (PFGNAS). 
+To address this issue, we designed an innovative approach termed **P**ersonalized **F**ederated **G**raph **N**eural **A**rchitecture **S**earch (PFGNAS). 
 
 - Motivated by the reasoning capability and inherent adaptability of large language models (LLMs), we explore the probability of LLMs enhancing the efficiency of federated personalized architecture search. PFGNAS formulates a task-specific prompt to use the self-reflective capabilities of large language models, facilitating continuous exploration and discovery of optimal architectures. 
 
@@ -54,7 +54,7 @@ Figure 2. A simplified example of GNN NAS optimization is demonstrated using the
 | ----------- | -------------- | -------------- |
 | GCN         | 78.63±1.21     | 78.58±0.52     |
 | GraphSage   | 74.15±0.54     | 73.20±0.29     |
-| GAT         | 79.81±0.52     | **79.04±0.24** |
+| GAT         | ***79.81±0.52***     | **79.04±0.24** |
 | GIN         | 57.37±0.94     | 73.89±0.54     |
 | GPR         | 77.14±1.09     | 78.21±0.10     |
 | ARIMA       | 73.93±0.40     | 71.65±1.57     |
@@ -64,7 +64,7 @@ Figure 2. A simplified example of GNN NAS optimization is demonstrated using the
 | FL+Darts    | 38.89±12.00    | 32.73±8.17     |
 | FL+Graphnas | 58.52±1.05     | 71.02±1.34     |
 | FLAGNNS     | 72.38±2.21     | 75.71±0.98     |
-| PFGNAS      | **79.94±0.95** | 78.85±0.47     |
+| PFGNAS      | **79.94±0.95** |***78.85±0.47***|
 
 **(Citeseer N=20)**
 
@@ -72,11 +72,11 @@ Figure 2. A simplified example of GNN NAS optimization is demonstrated using the
 | --------- | -------------- | -------------- |
 | GCN       | 73.40±1.57     | **77.72±0.51** |
 | GraphSage | 72.01±0.76     | 62.36±1.82     |
-| GAT       | 73.82±3.05     | 77.45±0.86     |
+| GAT       | 73.82±3.05     | ***77.45±0.86***     |
 | GIN       | 54.27±2.37     | 61.99±6.32     |
 | GPR       | 73.61±1.44     | 75.60±0.34     |
 | ARMA      | 68.48±3.56     | 71.55±1.19     |
-| APPNP     | 74.47±1.23     | 76.42±0.74     |
+| APPNP     | ***74.47±1.23*** | 76.42±0.74     |
 | FLAGNNS   | 54.52±6.40     | 71.81±2.63     |
 | FedPUB    | 71.97±10.83    | 67.94±10.71    |
 | PFGNAS    | **77.11±1.39** | 77.19±0.85     |
@@ -88,8 +88,8 @@ Figure 2. A simplified example of GNN NAS optimization is demonstrated using the
 | Model       | Accuracy   | AUC        | Best Architecture |
 | ----------- | ---------- | ---------- | ----------------- |
 | PFGNAS-GPT4 | 82.53±1.06 | 67.51±0.18 | `ddc5-hbb3-ihb3'  |
-| PFGNAS-GLM4 | 83.80±2.22 | 68.32±0.48 | `hia4-bkc3-fje5'  |
-| PFGNAS-PALM | 82.27±3.77 | 68.65±0.94 | `jhf2-fbd5-ddc5'  |
+| PFGNAS-GLM4 | **83.80±2.22** | 68.32±0.48 | `hia4-bkc3-fje5'  |
+| PFGNAS-PALM | 82.27±3.77 | **68.65±0.94** | `jhf2-fbd5-ddc5'  |
 
 ### Results of PFGNAS Prompt
 
@@ -104,9 +104,9 @@ To validate the effectiveness of GNAS Prompt design, we constructed four variant
 | ---------------------- | ---------- | ---------- | --------------------------------------------------- |
 | PFGNAS-st              | 81.08±3.66 | 91.90±0.79 | 'bcd3-aeg2-cih5-dkf1-ebi4-gdj5-hea2-igh3-khc1-aik5' |
 | PFGNAS-ssp             | 81.53±4.20 | 90.70±2.22 | 'cag5-dbf2-hei1-gcd3-fik4-ega5-ikb2-ahc1-bfd3-kif5' |
-| PFGNAS-sst             | 81.93±0.35 | 92.76±0.76 | 'ghi1-jka2-bcd5-agh3-cij4-def2-ghk5-jka1-bcd3-efg5' |
+| PFGNAS-sst             | ***81.93±0.35*** | **92.76±0.76** | 'ghi1-jka2-bcd5-agh3-cij4-def2-ghk5-jka1-bcd3-efg5' |
 | PFGNAS-p               | 79.21±2.73 | 91.78±2.15 | 'cdg5-ahi3-bfe2-igc1-dah5-geb3-fia2-ebd1-hcg5-baf3' |
-| PFGNAS                 | 82.19±2.15 | 92.39±1.68 | 'abc1-ced5-bdg3-dge3-fai2-iha2-abf5-gch5-cib2-dag1' |
+| PFGNAS                 | **82.19±2.15** | ***92.39±1.68*** | 'abc1-ced5-bdg3-dge3-fai2-iha2-abf5-gch5-cib2-dag1' |
 
 ## Quick Start
 
@@ -116,7 +116,7 @@ To validate the effectiveness of GNAS Prompt design, we constructed four variant
 | ----------------------------------------- | ----------------------------------------------------- | -------------------------------------------- | ------------------------------------------------------------ |
 | gpt-4, gpt-4-turbo-preview, gpt-3.5-turbo | https://api.openai.com/v1/chat/completions            | https://platform.openai.com/account/api-keys | https://platform.openai.com/docs/introduction                |
 | GLM-4                                     | https://open.bigmodel.cn/api/paas/v4/chat/completions | https://open.bigmodel.cn/usercenter/apikeys  | https://open.bigmodel.cn/dev/api#sdk                         |
-| PALM                                      | /                                                     | https://aistudio.google.com/app/apikey       | https://colab.research.google.com/drive/1L-cfen2dQeCyyz-H_tAN6kJt00a0hJit#scrollTo=UQKNxk8Ttkcy |
+| PALM                                      | No Need                                                    | https://aistudio.google.com/app/apikey       | https://colab.research.google.com/drive/1L-cfen2dQeCyyz-H_tAN6kJt00a0hJit#scrollTo=UQKNxk8Ttkcy |
 
 ### 2. Requirements
 
