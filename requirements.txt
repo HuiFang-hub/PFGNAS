@@ -1,0 +1,17 @@
+louvain==0.8.0
+python-igraph==0.9.10
+python-louvain==0.16
+scikit-image==0.22.0
+torch==1.11.0
+torch-cluster==1.6.0
+torch-geometric==2.1.0.post1
+torch-max-mem==0.0.4
+torch-ppr==0.0.8
+torch-scatter==2.0.9
+torch-sparse==0.6.15
+torchaudio==0.11.0
+torchmetrics==0.10.0
+torchvision==0.12.0
+federatedscope==0.2.1
+
+

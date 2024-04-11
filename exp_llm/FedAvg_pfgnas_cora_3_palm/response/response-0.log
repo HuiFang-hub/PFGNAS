@@ -1,0 +1,5 @@
+1: [['sgc', 'sgc', 'gcn', 'relu'], ['appnp', 'arma', 'sgc', 'relu'], ['arma', 'fc', 'identity', 'tanh']]
+2: [['appnp', 'gpr', 'gin', 'tanh'], ['sage', 'identity', 'gin', 'elu'], ['identity', 'gpr', 'gin', 'sigmoid']]
+3: [['identity', 'arma', 'fc', 'tanh'], ['fc', 'sage', 'gat', 'elu'], ['gat', 'gat', 'gpr', 'elu']]
+4: [['identity', 'sgc', 'gcn', 'relu'], ['appnp', 'arma', 'sgc', 'relu'], ['arma', 'fc', 'identity', 'tanh']]
+5: [['identity', 'gpr', 'gin', 'tanh'], ['sage', 'identity', 'gin', 'elu'], ['identity', 'gpr', 'gin', 'sigmoid']]

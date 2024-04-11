@@ -1,0 +1,102 @@
+# Whether to use GPU
+use_gpu: True
+seed: 0
+# Deciding which GPU to use
+device: 5
+
+#results_DIR: 'results'
+#response_DIR: 'exp'
+
+results_DIR: 'results_lda'
+response_DIR: 'exp_lda'
+
+# Federate learning related options
+federate:
+  # `standalone` or `distributed`
+  mode: 'standalone'
+  # Evaluate in Server or Client test set
+  make_global_eval: True
+  # Number of dataset being split
+  client_num: 3
+  # Number of communication round
+  total_round_num: 100
+  share_local_model: True
+  method: 'fedsageplus'
+
+fedsageplus:
+  num_pred: 5
+  gen_hidden: 64
+  hide_portion: 0.5
+  fedgen_epoch: 4
+  loc_epoch: 1
+  a: 1.0
+  b: 1.0
+  c: 1.0
+
+
+# Dataset related options
+data:
+  # Root directory where the data stored
+  root: data/
+  # Dataset name
+  type: pubmed
+  # Use Louvain algorithm to split `Cora`
+  splitter: 'lda' #'louvain'
+  dgl: False
+  mode: 'unify_data'
+  splitter_args: [ { 'alpha': 0.2 } ]
+
+
+dataloader:
+  # Type of sampler
+  type: pyg
+  # Use fullbatch training, batch_size should be `1`
+  batch_size: 200
+#  num_neigh: -1
+
+
+# Model related options
+model:
+  # Model type
+  type: 'pfgnas-evo'
+  # Hidden dim
+  hidden: 64
+  # Dropout rate
+  dropout: 0.7
+  layer: 3
+  struct: '0122'
+  operations: 'abd' # len must be 3
+  # Number of Class of `Cora`
+#  num_classes: 7
+
+# Criterion related options
+criterion:
+  # Criterion type
+  type: CrossEntropyLoss
+
+# Trainer related options
+trainer:
+  # Trainer type
+  type: nodefullbatch_trainer
+
+# Train related options
+train:
+  # Number of local update steps
+  local_update_steps: 4
+  # Optimizer related options
+  optimizer:
+    # Learning rate
+    lr: 0.005
+    # Weight decay
+    weight_decay: 5e-6
+    # Optimizer type
+    type: Adam #SGD
+
+# Evaluation related options
+eval:
+  # Frequency of evaluation
+  freq: 4  #----------------------------------------------------------------
+  # Evaluation metrics, accuracy and number of correct items
+  metrics: ['roc_auc','acc']
+  best_res_update_round_wise_key: test_acc
+  split: ['test']

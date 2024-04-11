@@ -1,0 +1,88 @@
+# Whether to use GPU
+use_gpu: True
+seed: 0
+# Deciding which GPU to use
+#device: 2
+gpu_list: [0,1,2]
+
+
+results_DIR: 'results'
+response_DIR: 'exp'
+
+# Federate learning related options
+federate:
+  # `standalone` or `distributed`
+  mode: 'standalone'
+  # Evaluate in Server or Client test set
+  make_global_eval: True
+  # Number of dataset being split
+  client_num: 5
+  # Number of communication round
+  total_round_num: 2
+  # FedPUB parameters
+  method: FedPUB
+  frac: 1.0
+  norm_scale: 3
+  n_proxy: 5
+  agg_norm: 'exp'
+  n_eps: 1
+
+
+personalization:
+  regular_weight: 0.1
+
+# Dataset related options
+data:
+  # Root directory where the data stored
+  root: data/
+  # Dataset name
+  type: cora
+  # Use Louvain algorithm to split `Cora`
+  splitter: 'louvain'
+  dgl: False
+  mode: 'unify_data' #'disjoint'
+  ratio_train: 0.2
+
+model:
+  # Hidden dim
+  hidden: 64
+  type: maskedgcn
+
+dataloader:
+  # Type of sampler
+  type: pyg
+  # Use fullbatch training, batch_size should be `1`
+  batch_size: 200
+#  num_neigh: -1
+
+# Criterion related options
+criterion:
+  # Criterion type
+  type: CrossEntropyLoss
+
+# Trainer related options
+trainer:
+  # Trainer type
+  type: nodefullbatch_trainer
+
+# Train related options
+train:
+  # Number of local update steps
+  local_update_steps: 4
+  # Optimizer related options
+  optimizer:
+    # Learning rate
+    lr: 0.01
+    # Weight decay
+    weight_decay: 1e-6
+    # Optimizer type
+    type: Adam #SGD
+
+# Evaluation related options
+eval:
+  # Frequency of evaluation
+  freq: 10  #----------------------------------------------------------------
+  # Evaluation metrics, accuracy and number of correct items
+  metrics: ['roc_auc','acc']
+  best_res_update_round_wise_key: test_acc
+  split: ['test']
