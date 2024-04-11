@@ -95,17 +95,17 @@ Figure 2. A simplified example of GNN NAS optimization is demonstrated using the
 
 To validate the effectiveness of GNAS Prompt design, we constructed four variants for conducting ablation experiments:
 
-- PFGNAS$_{-\chi}$: The prompt without search task.
-- PFGNAS$_{-\Omega}$: The prompt without search space.
-- PFGNAS$_{-\psi}$: The prompt without search strategy.
-- PFGNAS$_{-\textbf{P}}$: The prompt without performance feed.
+- PFGNAS-st: The prompt without search task.
+- PFGNAS-ssp: The prompt without search space.
+- PFGNAS-sst: The prompt without search strategy.
+- PFGNAS-p: The prompt without performance feed.
 
 | Model                  | Accuracy   | AUC        | Best Architecture                                   |
 | ---------------------- | ---------- | ---------- | --------------------------------------------------- |
-| PFGNAS$_{-\chi}$       | 81.08±3.66 | 91.90±0.79 | 'bcd3-aeg2-cih5-dkf1-ebi4-gdj5-hea2-igh3-khc1-aik5' |
-| PFGNAS$_{-\Omega}$     | 81.53±4.20 | 90.70±2.22 | 'cag5-dbf2-hei1-gcd3-fik4-ega5-ikb2-ahc1-bfd3-kif5' |
-| PFGNAS$_{-\psi}$       | 81.93±0.35 | 92.76±0.76 | 'ghi1-jka2-bcd5-agh3-cij4-def2-ghk5-jka1-bcd3-efg5' |
-| PFGNAS$_{-\textbf{P}}$ | 79.21±2.73 | 91.78±2.15 | 'cdg5-ahi3-bfe2-igc1-dah5-geb3-fia2-ebd1-hcg5-baf3' |
+| PFGNAS-st              | 81.08±3.66 | 91.90±0.79 | 'bcd3-aeg2-cih5-dkf1-ebi4-gdj5-hea2-igh3-khc1-aik5' |
+| PFGNAS-ssp             | 81.53±4.20 | 90.70±2.22 | 'cag5-dbf2-hei1-gcd3-fik4-ega5-ikb2-ahc1-bfd3-kif5' |
+| PFGNAS-sst             | 81.93±0.35 | 92.76±0.76 | 'ghi1-jka2-bcd5-agh3-cij4-def2-ghk5-jka1-bcd3-efg5' |
+| PFGNAS-p               | 79.21±2.73 | 91.78±2.15 | 'cdg5-ahi3-bfe2-igc1-dah5-geb3-fia2-ebd1-hcg5-baf3' |
 | PFGNAS                 | 82.19±2.15 | 92.39±1.68 | 'abc1-ced5-bdg3-dge3-fai2-iha2-abf5-gch5-cib2-dag1' |
 
 ## Quick Start
