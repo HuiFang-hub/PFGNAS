@@ -1,18 +1,7 @@
 import requests
 import json
-#
-# url = 'https://896f7c04.gpt4-58r.pages.dev/'
-# url = 'https://gpt4-58r.pages.dev/v1/chat/completions'
-# url = 'https://openai.eaglecode-fh.uk/v1/chat/completions'
-# url = 'https://openapi.896f7c04.gpt4-58r.pages.dev/v1/chat/completions '
-# url = 'https://chatgptproxyapi-d8n.pages.dev/api/v1/chat/completions'
-
-# my
-# url = "https://openai.1rmb.tk/v1/chat/completions"
-# api_key = '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'
-
 # zx
-api_key = 'sb-566f675f2973f55bcd91071eebe87aa20071fd67f158b9f8'  # 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'
+api_key = 'xxxxxx'  
 url = "https://api.openai-sb.com/v1/chat/completions"
 
 headers = {
@@ -35,7 +24,7 @@ headers = {
 # We conduct extensive experiments, and the results validate the effectiveness of our approach.
 # The rest of the paper is organized as follows. In Section~\ref{section:Related Work}, we review related work. In Section~\ref{section:Problem Formulation}, we introduce some preliminary concepts and formalize the problem. Then in Section~\ref{section:Methodology}, we ??????. Experiments and further analysis are presented in Section~\ref{section:Experiments}. Finally, we conclude the work in Section~\ref{section:Conclusion}.'''
 
-content = '给我讲一个笑话'
+content = 'give me a story'
 payload = {
   "model": "gpt-4-1106-preview",
   "messages": [
@@ -47,20 +36,9 @@ payload = {
 }
 
 response = requests.post(url, headers=headers, json=payload)
-# response.raise_for_status() # 抛出异常，如果响应码不是200
+# response.raise_for_status() 
 data = response.json()
 # print(data)
 output_text = data['choices'][0]['message']['content']
 print(output_text)
 
-# try:
-#     response = requests.post(url, headers=headers, json=payload)
-#     response.raise_for_status() # 抛出异常，如果响应码不是200
-#     data = response.json()
-#     # print(data)
-#     output_text = data['choices'][0]['message']['content']
-#     print(output_text)
-# except requests.exceptions.RequestException as e:
-#     print(f"请求错误: {e}")
-# except json.JSONDecodeError as e:
-#     print(f"无效的 JSON 响应: {e}")
