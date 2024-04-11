@@ -48,7 +48,7 @@ Figure 2. A simplified example of GNN NAS optimization is demonstrated using the
 
 ### The Performance of Different Clients numbers (under Cross-Nodes clients scenario)
 
-**(Citeseer N=10)**
+**(Citeseer, N=10, 'Louvain' splitter)**
 
 | Model       | ACC            | ROC            |
 | ----------- | -------------- | -------------- |
@@ -66,7 +66,7 @@ Figure 2. A simplified example of GNN NAS optimization is demonstrated using the
 | FLAGNNS     | 72.38±2.21     | 75.71±0.98     |
 | PFGNAS      | **79.94±0.95** |***78.85±0.47***|
 
-**(Citeseer N=20)**
+**(Citeseer, N=20, 'Louvain' splitter)**
 
 | Model     | Accuracy       | AUC            |
 | --------- | -------------- | -------------- |
