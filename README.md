@@ -1,6 +1,6 @@
 # PFGNAS
 
-This repo contains the sample code for reproducing the results of our paper: **Graph Neural Architecture Search with Large Language Models for Personalized Federated Learning**.
+This repo contains the sample code for reproducing the results of our paper: **Large Language Models Enhanced Personalized Graph Neural Architecture Search in Federated Learning**.
 
 ## Introduction
 
@@ -46,7 +46,7 @@ Figure 2. A simplified example of GNN NAS optimization is demonstrated using the
 
 ## Results
 
-### The Performance of Different Clients numbers (under Cross-Nodes clients scenario)
+### The Performance of Different Client numbers (under Cross-Nodes clients scenario)
 
 **(Citeseer, N=10, 'Louvain' splitter)**
 
