@@ -12,7 +12,7 @@ To address this issue, we designed an innovative approach termed **P**ersonalize
 
 - Second, to address the issue of client drift arising from data heterogeneity, we adopt a weight-sharing supernet strategy to enhance the server model's optimization while preserving the client model's personalization. Extensive experiments show the superior performance of PFGNAS compared to conventional methods, particularly emphasizing the efficacy of large language models in Graph Neural Architecture Search (GNAS) tasks.
 
-![Figure 1. The overall framework of our PFGNAS](fig_md/Framework.png)
+![Figure 1. The communication process of our PFGNAS](fig_md/Framework.png)
 
 
 
