@@ -30,7 +30,7 @@ Figure 1. The overall framework of our PFGNAS
 
 
 
-![Figure 2. A simplified example of GNN NAS optimization is demonstrated using the Cora dataset ($N$=3).](fig_md/llm.png)
+![Figure 2. A simplified example of GNN NAS optimization is demonstrated using the Cora dataset ($N$=3).](fig_md/example.png)
 
 
 
