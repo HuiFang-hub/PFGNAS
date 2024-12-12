@@ -1,4 +1,4 @@
-# PFGNAS
+# PFGNAS (AAAI2025)
 
 This repo contains the sample code for reproducing the results of our paper: **Large Language Models Enhanced Personalized Graph Neural Architecture Search in Federated Learning**.
 
